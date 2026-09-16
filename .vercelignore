@@ -1,0 +1,82 @@
+# =============================================================================
+# Vercel Deployment Ignore Rules — NEET Notes 2027
+# =============================================================================
+# Excludes local files, secrets, local storage PDFs, and development databases
+# from being uploaded to Vercel during CLI deployment.
+# =============================================================================
+
+# Environment and local secret files
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# Local digital product storage & PDFs (Must come from Supabase in production)
+storage/
+storage/**
+uploads/
+uploads/**
+private/
+private/**
+private-storage/
+private-storage/**
+pdfs/
+pdfs/**
+*.pdf
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+prisma/dev.db
+dev.db
+
+# Credentials and keys
+credentials/
+secrets/
+secret/
+credentials.json
+service-account.json
+serviceAccount.json
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Testing & coverage
+coverage/
+*.lcov
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# System & editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Backup & temporary files
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
